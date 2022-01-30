@@ -1,0 +1,61 @@
+.LoginCard-container {
+  width: 20%;
+  height: 40vh;
+  background: var(--component-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.LoginCard-container h2 {
+  font-family: var(--heading-font-family);
+}
+
+.input-field {
+  width: 80%;
+  margin: 10px 0px 10px 0px;
+  padding: 15px 5px 15px 5px;
+  border: none;
+  text-indent: 5px;
+  background-color: transparent;
+  border: 1px solid gray;
+  font-family: var(--text-font-family);
+  font-size: 18px;
+  outline: none;
+  border-radius: 3px;
+}
+
+.logged-in-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  font-family: var(--text-font-family);
+}
+
+.signin-checkbox-label {
+  margin-left: 5px;
+}
+
+.LoginCard-container:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.reset-password-and-create-login {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--text-font-family);
+  color: gray;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+
+.login-links {
+  color: black;
+  text-decoration: none;
+}

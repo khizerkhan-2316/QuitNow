@@ -1,17 +1,18 @@
-import '../../root.css';
-import './Login.css';
+import './CreateLogin.css';
 import LoginCard from '../../Components/StatefulComponents/LoginCard/LoginCard.js';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import ConfirmationModal from '../../Components/StatefulComponents/ConfirmationModal/ConfirmationModal.js';
 
-const Login = (props) => {
+const CreateLogin = (props) => {
   const onSubmit = (email, password) => {
     if (!validateInput(email, password)) {
       return;
     }
-    const auth = getAuth();
 
-    signInWithEmailAndPassword(auth, email, password)
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        props.setConfirmation(true);
         props.setLoggedIn(true);
         localStorage.setItem('isLoggedIn', true);
       })
@@ -29,7 +30,7 @@ const Login = (props) => {
     }
 
     if (password.trim().length === 0) {
-      props.setErrorMessage('Enter a correct password');
+      props.setErrorMessage('Enter a password');
       props.setError(true);
       return false;
     }
@@ -38,23 +39,33 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login-form-container">
+    <div className="create-login-form-container">
       <LoginCard
-        heading="SIGN IN TO YOUR ACCOUNT"
-        firstOption="Forgot your password?"
-        secondOption="Sign Up"
-        firstDestination="/reset"
-        secondDestination="/signup"
+        heading="CREATE YOUR ACCOUNT"
+        firstOption="Sign In"
+        firstDestination="/login"
+        secondDestination=""
         setEmail={props.setEmail}
         setPassword={props.setPassword}
         error={props.error}
         setError={props.setError}
         onSubmit={() => onSubmit(props.email, props.password)}
         errorMessage={props.errorMessage}
-        text={'SIGN IN'}
+        text={'SIGN UP'}
       />
+      {props.confirmation ? (
+        <ConfirmationModal
+          confirmation={props.confirmation}
+          setConfirmation={props.setConfirmation}
+          text="You have succesfully created an acount!"
+          heading="Successful!"
+          destination="/"
+        />
+      ) : (
+        ''
+      )}
     </div>
   );
 };
 
-export default Login;
+export default CreateLogin;

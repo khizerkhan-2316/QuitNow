@@ -1,0 +1,15 @@
+.Confirmation-container {
+  width: 50%;
+  height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.Confirmation-container a {
+  color: white;
+  height: auto;
+}

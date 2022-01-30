@@ -1,0 +1,59 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed; /* Sit on top of the page content */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.errorContainer {
+  width: 50%;
+  height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.heading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3852c0;
+  font-family: var(--heading-font-family);
+}
+
+.heading h2 {
+  margin-left: 20px;
+}
+
+.main-container p {
+  color: black;
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: var(--text-font-family);
+}
+
+.button {
+  width: auto;
+  padding: 10px;
+}
+
+.button-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.button:hover {
+  transition: 0.3s ease-in-out;
+  background-color: green;
+}

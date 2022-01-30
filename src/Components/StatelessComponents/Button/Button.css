@@ -1,0 +1,16 @@
+.signup-login-button {
+  width: 80%;
+  margin-top: 20px;
+  font-family: var(--text-font-family);
+  color: white;
+  background: var(--button-color);
+  border: none;
+  padding: 5px 20px 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signup-login-button:hover {
+  transition: 0.3s;
+  box-shadow: var(--box-shadow);
+}

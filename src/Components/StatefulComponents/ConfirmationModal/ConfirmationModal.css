@@ -1,15 +1,42 @@
 .Confirmation-container {
-  width: 50%;
-  height: 300px;
+  width: 25%;
+  height: 325px;
   background-color: white;
   border-radius: 5px;
   color: white;
   font-family: helvetica, arial, sans-serif;
   color: white;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .Confirmation-container a {
   color: white;
   height: auto;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1419px) {
+  .Confirmation-container {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Confirmation-container {
+    width: 35%;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Confirmation-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Confirmation-container {
+    width: 80%;
+    height: 350px;
+  }
 }

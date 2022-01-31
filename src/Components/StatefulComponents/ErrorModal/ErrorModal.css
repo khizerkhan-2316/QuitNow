@@ -11,12 +11,13 @@
 }
 
 .errorContainer {
-  width: 50%;
+  width: 25%;
   height: 300px;
   background-color: white;
   border-radius: 5px;
   color: white;
   font-family: helvetica, arial, sans-serif;
+  border-radius: 20px;
 }
 
 .heading {
@@ -27,6 +28,7 @@
   align-items: center;
   background-color: #3852c0;
   font-family: var(--heading-font-family);
+  border-radius: 20px 20px 0px 0px;
 }
 
 .heading h2 {
@@ -56,4 +58,29 @@
 .button:hover {
   transition: 0.3s ease-in-out;
   background-color: green;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1419px) {
+  .errorContainer {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .errorContainer {
+    width: 35%;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .errorContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .errorContainer {
+    width: 80%;
+  }
 }

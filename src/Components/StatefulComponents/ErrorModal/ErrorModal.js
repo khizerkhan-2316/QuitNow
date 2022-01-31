@@ -20,8 +20,9 @@ const Error = (props) => {
           <Button
             onClick={buttonHandler}
             className="button"
-            style={{ width: '20%' }}
+            style={{ width: '25%' }}
           >
+            {''}
             Okay
           </Button>
         </div>

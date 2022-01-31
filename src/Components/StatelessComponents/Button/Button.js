@@ -8,6 +8,7 @@ const Button = (props) => {
       className="signup-login-button"
       style={props.style}
     >
+      {' '}
       {props.children}
     </button>
   );

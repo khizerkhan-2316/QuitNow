@@ -47,7 +47,11 @@ const ResetPassword = (props) => {
             onChange={resetPasswordHandler}
           />
 
-          <Button type="button" onClick={() => onSubmit(props.email)}>
+          <Button
+            type="button"
+            onClick={() => onSubmit(props.email)}
+            style={{ width: '50%' }}
+          >
             RESET PASSWORD
           </Button>
         </div>

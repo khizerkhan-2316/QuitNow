@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 :root {
-  --background-color: #3852c0;
+  --background-color: hsl(0, 0%, 98%);
   --component-color: #fff;
   --button-color: #5372f1;
   --inputfield-color: #b2b9bf;
